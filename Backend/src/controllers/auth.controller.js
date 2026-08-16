@@ -5,6 +5,7 @@ import blacklistTokenModel from "../models/blacklist.model.js";
 
 
 
+
 async function registerUserController(req, res) {
     const { username, email, password } = req.body;
     if(!username || !email || !password) {
@@ -91,4 +92,19 @@ async function logoutUserController(req,res){
 }
 
 
-export { registerUserController , loginController , logoutUserController };
+async function getMeController(req,res){
+    const user = await userModel.findById(req.user.id);
+    res.status(200).json({
+        message: "User fetched successfully",
+    user: {
+        id: user._id,
+        username: user.username,
+        email: user.email
+    }});
+
+
+}
+
+
+
+export { registerUserController , loginController , logoutUserController, getMeController };
