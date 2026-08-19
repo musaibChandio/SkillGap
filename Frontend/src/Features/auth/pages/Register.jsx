@@ -2,7 +2,7 @@ import React from 'react'
 import { useNavigate , Link } from 'react-router'
  
 function Register() {
-    const navigate = useNavigate()
+    const navigate = useNavigate() 
 
    const handleSubmit = (e) => {
     e.preventDefault()

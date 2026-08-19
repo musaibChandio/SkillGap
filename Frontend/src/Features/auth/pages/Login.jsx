@@ -1,6 +1,6 @@
 import React from 'react'
 import '../auth.form.scss'
-
+import { Link } from 'react-router' 
 function Login() {
   const handleSubmit = (e) => {
     e.preventDefault()
@@ -22,6 +22,8 @@ function Login() {
           </div>
           <button className='button primary-button' type="submit">Login</button>
         </form>
+        <p>Dont have an account? <Link to="/register">Register</Link></p>
+        
       </div>
     </main>
   )
