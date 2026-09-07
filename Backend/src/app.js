@@ -14,9 +14,11 @@ app.use(cookieParser())
 
 // require all the routes here 
 import authRouter from './routes/auth.routes.js'
+import interviewRouter from './routes/interview.routes.js'
 
 // using all the routes here
 app.use("/api/auth", authRouter)
+app.use("/api/interview", interviewRouter)
 
 export default app
 
