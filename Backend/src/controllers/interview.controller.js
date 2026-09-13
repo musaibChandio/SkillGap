@@ -48,7 +48,7 @@
 // const require = createRequire(import.meta.url);
 // const pdfParse = require("pdf-parse");
 import { PDFParse } from 'pdf-parse';
-import generateInterviewReport from "../services/ai.service.js";
+import { generateInterviewReport } from "../services/ai.service.js";
 import interviewReportModel from "../models/interviewReport.model.js";
 
 
